@@ -59,7 +59,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "dist.tar.gz"
-          target: "/tmp/dist.tar.gz"
+          target: "/tmp"
 
       - name: Extract/Cleanup archive & restart nginx.
         uses: appleboy/ssh-action@master
