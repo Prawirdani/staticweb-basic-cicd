@@ -61,12 +61,14 @@ jobs:
           source: "dist.tar.gz"
           target: "/tmp"
 
-      - name: Extract/Cleanup archive & restart nginx.
+      - name: Extract/Cleanup archive & restart server.
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # Adjust target directory as needed, im using nginx as the webserver which the default directory is /var/www/
+          # Also adjust the restart command as needed, im using nginx as the webserver which the command is `sudo systemctl restart nginx`
           script: |
             sudo tar -xzf /tmp/dist.tar.gz -C /var/www/
             sudo rm /tmp/dist.tar.gz
