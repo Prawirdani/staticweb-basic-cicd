@@ -14,6 +14,7 @@
 		</a>
 	</div>
 	<h1>Hi Everyone!</h1>
+	<p>Lorem ipsum dolor sit amet.</p>
 
 	<div class="card">
 		<Counter />
