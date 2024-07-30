@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*.*.*'  # Triggers the workflow on version tags like v1.0.0
+  workflow_dispatch:
 
 jobs:
   release:
@@ -25,7 +26,7 @@ jobs:
       run: npm run build
 
     - name: Archive the build output
-      run: zip -r build.zip build
+      run: zip -r build.zip dist # dist is the build output directory from my web app
 
     - name: Create GitHub Release
       id: create_release
