@@ -37,7 +37,7 @@ This workflow is suitable for frontend libraries/frameworks that require a build
 ## Setup Instructions
 1. Ensure you have a Compute Instance / VPS with SSH access. It can be an EC2 instance, DigitalOcean Droplet, or any other cloud provider.
 2. Generate an SSH key pair and add the public key to the Compute Instance's `~/.ssh/authorized_keys` file.
-3. Setup your *SSH_HOST*, **SSH_USER**, and **SSH_PRIVATE_KEY** in the repository secrets. The PRIVATE_KEY is the private key you generated in the previous step.
+3. Setup your **SSH_HOST**, **SSH_USER**, and **SSH_PRIVATE_KEY** in the repository secrets. The PRIVATE_KEY is the private key you generated in the previous step.
 4. Focus on the `.github/workflows/` dir. You can customize the deployment process to suit your needs.
 
 ## Usage
